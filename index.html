@@ -3,28 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - UX Designer</title>
+    <title>Currículo - Ketrin Vargas</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #0d1117;
+            color: #c9d1d9;
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
+            max-width: 900px;
+            margin: 40px auto;
+            background: #161b22;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .sidebar {
+            flex: 1 1 250px;
+            background: #21262d;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
         }
-        h1, h2 {
-            color: #333;
+        .main-content {
+            flex: 2 1 500px;
+            padding: 20px;
         }
         .profile-img {
-            width: 100px;
+            width: 120px;
             border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        h1, h2 {
+            color: #58a6ff;
+            text-align: center;
         }
         .section {
             margin-top: 20px;
@@ -36,57 +54,63 @@
         .contact li, .skills li, .experience li, .education li {
             margin-bottom: 10px;
         }
-        .portfolio-link {
-            display: block;
-            margin-top: 10px;
-            color: #007BFF;
+        .skills li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .skill-bar {
+            width: 60%;
+            height: 8px;
+            background: #30363d;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .skill-fill {
+            height: 100%;
+            background: #58a6ff;
+        }
+        a {
+            color: #58a6ff;
             text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Ketrin [Sobrenome]</h1>
-            <p>UX Designer | Product Designer</p>
-        </header>
-        
-        <section class="section">
+        <div class="sidebar">
+            <img src="profile.jpg" alt="Foto de Ketrin Vargas" class="profile-img">
+            <h1>Ketrin Vargas</h1>
+            <p>Analista de Sistemas | Engenharia de Software | Mestrado em Engenharia de Software</p>
             <h2>Contato</h2>
             <ul class="contact">
                 <li>Email: ketrin@email.com</li>
                 <li>Telefone: (xx) xxxxx-xxxx</li>
-                <li>LinkedIn: <a href="#">linkedin.com/in/ketrin</a></li>
-                <li>Portfólio: <a href="#" class="portfolio-link">meusite.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/ketrin-vargas/">linkedin.com/in/ketrin-vargas</a></li>
             </ul>
-        </section>
-        
-        <section class="section">
             <h2>Habilidades</h2>
             <ul class="skills">
-                <li>Pesquisa e testes de usabilidade</li>
-                <li>Design de interface (UI)</li>
-                <li>Prototipagem e wireframing</li>
-                <li>Ferramentas: Figma, Adobe XD, Sketch</li>
-                <li>Design centrado no usuário</li>
+                <li>Pesquisa e testes de usabilidade <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div></li>
+                <li>Design de interface (UI) <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div></li>
+                <li>Prototipagem e wireframing <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div></li>
+                <li>Figma, Adobe XD, Sketch <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div></li>
             </ul>
-        </section>
-        
-        <section class="section">
+        </div>
+        <div class="main-content">
             <h2>Experiência</h2>
             <ul class="experience">
-                <li><strong>Analista de Sistemas Júnior</strong> - Cooperativa XYZ (20XX - Presente)</li>
-                <li><strong>Projetos Acadêmicos</strong> - Engenharia de Software, UNIPAMPA</li>
+                <li><strong>Analista de Sistemas</strong> - Empresa XYZ (20XX - Presente)</li>
+                <li><strong>Estagiária em Desenvolvimento de Software</strong> - Empresa ABC (20XX - 20XX)</li>
             </ul>
-        </section>
-        
-        <section class="section">
             <h2>Educação</h2>
             <ul class="education">
-                <li><strong>Mestrado Profissional em Engenharia de Software</strong> - UNIPAMPA (2023 - Presente)</li>
-                <li><strong>Bacharelado em Engenharia de Software</strong> - UNIPAMPA (2019 - 2023)</li>
+                <li><strong>Mestrado em Engenharia de Software</strong> - Universidade Federal do Pampa (2023 - Presente)</li>
+                <li><strong>Bacharelado em Engenharia de Software</strong> - Universidade Federal do Pampa (2019 - 2023)</li>
             </ul>
-        </section>
+        </div>
     </div>
 </body>
 </html>
